@@ -1,10 +1,6 @@
 # Lexical density calculator API
 
-
-## Usage
-
-
-### Installation
+## Installation and Usage
 
 Install the dependencies:
 
@@ -24,9 +20,9 @@ Run app:
 $ npm start
 ```
 
-## Description:
+### Detailed usage
 
-[Api Documentation](docs/API_docs.md)
+See [Api Documentation](docs/API_docs.md)
 
 Non-lexical words are stored in a Mongo DB. 
 
@@ -42,11 +38,14 @@ Select "Home" -> use form to calculate lexical density.
 ![Screenshot Lexical densitity calculator](/docs/screenshot_ui_ld.jpg)
 
 
-## Inspired by:
+## Inspired by
 
 https://github.com/bradtraversy/nodekb for NodeJS/Express/MongoDB,
+
 https://github.com/NaturalNode/natural for Tokenizer
+
 https://github.com/parmentf/node-sentence-tokenizer for sentence Tokenizer (it's word tokenizer is buggy, splits only on space)
+
 https://scotch.io/tutorials/test-a-node-restful-api-with-mocha-and-chai for testing
 
 ## Technologies
