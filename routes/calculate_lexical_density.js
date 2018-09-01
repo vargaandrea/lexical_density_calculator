@@ -22,7 +22,6 @@ router.post('/', function(req, res){
       var errors = result.array().map(function (elem) {
           return elem.msg;
       });
-      console.log(result.array());
       console.log('There are following validation errors: ' + errors.join('&&'));
       res.render('calculate_lexical_density', {
           errors: result.array()
