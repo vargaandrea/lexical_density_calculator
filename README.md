@@ -24,10 +24,22 @@ Run app:
 $ npm start
 ```
 
-[Api Documentation](docs/API_doc.md)
-
 ## Description:
 
+[Api Documentation](docs/API_docs.md)
+
+Non-lexical words are stored in a Mongo DB. 
+
+UI is included for entering a text and calculating lexical density, as well as protected area for creating the list of non-lexical words and add/edit/delete them.
+
+For calculations to work, the list of non-lexical words needs to be set up:
+ * Access UI from browser (http://localhost:3000)
+ * seletct from top menu: "Register" -> register a user
+ * Log in with the user
+ * select: "Non-lexical words" -> press "Reset list"
+ 
+Select "Home" -> use form to calculate lexical density.
+![Screenshot Lexical densitity calculator](/docs/screenshot_ui_ld.png)
 
 
 ## Inspired by:
