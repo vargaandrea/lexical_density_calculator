@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1 #{title}
+  form(method='POST', action='/calculate_lexical_density/')
+    #form-group
+      label Text:
+      textarea.form-control(name='input_text', type='text')
+       = input_text
+      label Verbose:&nbsp;
+        input(name='verbose', type='checkbox', checked=(verbose?"checked":undefined))
+
+    br
+    input.btn.btn-primary(type='submit',value='Calculate lexical density')
+

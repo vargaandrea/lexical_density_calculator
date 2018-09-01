@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1 #{title}
+  form(method='POST', action='/non_lexical_words/add')
+    #form-group
+      label Word:
+      input.form-control(name='word', type='text')
+    br
+    input.btn.btn-primary(type='submit',value='Submit')

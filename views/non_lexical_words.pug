@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  h1 #{title}
+  if user
+    ul(class='words-list')
+      li(class='words-list-element')
+        a.btn.btn-primary(href='/non_lexical_words/add') Add new
+      li(class='words-list-element')
+        a.btn.btn-primary(href='/non_lexical_words/reset_list') Reset list
+
+
+  ul.list-group
+    each non_lexical_word, i in non_lexical_words
+      li.list-group-item
+        ul(class='words-list')
+         div(class='floatleft')
+           li(class='words-list-element')
+             = non_lexical_word.word
+         div(class='floatright')
+           if user
+             li(class='words-list-element')
+                a.btn.btn-primary(href='/non_lexical_words/edit/'+non_lexical_word._id) Edit
+             li(class='words-list-element')
+                a.btn.btn-danger.delete-non_lexical_word(href='#',data-id=non_lexical_word._id) Delete
