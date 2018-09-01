@@ -39,7 +39,7 @@ For calculations to work, the list of non-lexical words needs to be set up:
  * select: "Non-lexical words" -> press "Reset list"
  
 Select "Home" -> use form to calculate lexical density.
-![Screenshot Lexical densitity calculator](/docs/screenshot_ui_ld.png)
+![Screenshot Lexical densitity calculator](/docs/screenshot_ui_ld.jpg)
 
 
 ## Inspired by:
