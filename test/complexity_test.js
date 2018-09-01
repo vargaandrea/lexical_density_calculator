@@ -24,6 +24,7 @@ describe('/GET complexity', () => {
   });
 });
 
+
 var send_data1 = {
     'input_text' : "test, ".repeat(101)
 };
@@ -61,7 +62,7 @@ describe('/GET complexity', () => {
 
 
 var send_data3 = {
-    'input_text' : "Kim loves going​ to the​ cinema"
+    'input_text' : "Kim loves going​ to the​ cinema."
 };
 describe('/GET complexity', () => {
   it('It should return json with overall_ld: 66.67', (done) => {
@@ -82,7 +83,7 @@ var send_data4 = {
     'input_text' : "Kim loves going​ to the​ cinema. He wants to go today."
 };
 describe('/GET complexity', () => {
-  it('it should .......TODO', (done) => {
+  it('It should return verbose lexical diversity', (done) => {
     chai.request(app)
     .get('/complexity?mode=verbose')
     .send(send_data4)
@@ -93,8 +94,3 @@ describe('/GET complexity', () => {
     });
   });
 });
-
-
-
-
-

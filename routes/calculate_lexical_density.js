@@ -5,7 +5,6 @@ var requestComplexity = require("../lib/request_complexity");
 var http = require("http");
 var querystring = require('querystring');
 
-
 // Register Form
 router.get('/', function(req, res){
   res.render('calculate_lexical_density', {

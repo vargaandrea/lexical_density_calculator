@@ -6,11 +6,9 @@ let NonLexicalWord = require('../models/non_lexical_word');
 // User Model
 let User = require('../models/user');
 
-
 router.get('/', function(req, res){
   render_non_lexical_words(req, res, '')
 });
-
 
 router.get('/deleted', function(req, res){
   render_non_lexical_words(req, res, 'Word has been deleted')
@@ -170,7 +168,6 @@ function render_non_lexical_words(req, res, succesText='') {
   });
 }
 
-
 // Access Control
 function ensureAuthenticated(req, res, next){
   if(req.isAuthenticated()){
@@ -180,7 +177,5 @@ function ensureAuthenticated(req, res, next){
     res.redirect('/users/login');
   }
 }
-
-
 
 module.exports = router;
