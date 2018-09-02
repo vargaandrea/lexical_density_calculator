@@ -6,8 +6,9 @@ const expressValidator = require('express-validator');
 const flash = require('connect-flash');
 const session = require('express-session');
 const passport = require('passport');
-const config = require('./config/database');
+const config = require('./config/config');
 
+//mongoose.connect(config.database, {useMongoClient: true});
 
 mongoose.connect(config.database, {useMongoClient: true});
 let db = mongoose.connection;

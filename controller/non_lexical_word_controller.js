@@ -80,35 +80,28 @@ var NonLexicalWordController = {
   },
 
   ResetList: function(req, res){
-    if(!req.user || !req.user._id) {
-      res.redirect('/users/login');
-    } else {
-
-      NonLexicalWord.findById(req.params.id, function(err, non_lexical_word){
-
-        let query = {};
-        NonLexicalWord.remove(query, function(err){
-          if(err){
-            console.log(err);
-          } else {
-            var fs = require('fs');
-            var words = fs.readFileSync('./assets/non_lexical_words.txt').toString().split("\n");
-            var word_objects = [];
-            for(i in words) {
-              word_objects.push({word: words[i]})
-            }
-            NonLexicalWord.insertMany(word_objects, function(err) {
-              if(err){
-                console.log(err);
-              } else {
-                req.flash('success', 'List has been reset');
-                res.redirect('/non_lexical_words');
-              }
-            });
+      NonLexicalWord.remove({}, function(err){
+        if(err){
+          console.log(err);
+        } else {
+          var fs = require('fs');
+          var words = fs.readFileSync('./assets/non_lexical_words.txt').toString().split("\n");
+          var word_objects = [];
+          for(i in words) {
+            word_objects.push({word: words[i]})
           }
-        });
+          NonLexicalWord.insertMany(word_objects, function(err) {
+            if(err){
+              console.log(err);
+            } else {
+              req.flash('success', 'List has been reset');
+              res.redirect('/non_lexical_words');
+            }
+          });
+        }
+
       });
-    }
+
   },
 
   Delete: function(req, res) {
