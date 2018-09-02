@@ -5,7 +5,7 @@ block content
   if user
     ul(class='words-list')
       li(class='words-list-element')
-        a.btn.btn-primary(href='/non_lexical_words/add') Add new
+        a.btn.btn-primary(href='/non_lexical_words/add_form') Add new
       li(class='words-list-element')
         a.btn.btn-primary(href='/non_lexical_words/reset_list') Reset list
 
@@ -20,6 +20,6 @@ block content
          div(class='floatright')
            if user
              li(class='words-list-element')
-                a.btn.btn-primary(href='/non_lexical_words/edit/'+non_lexical_word._id) Edit
+                a.btn.btn-primary(href='/non_lexical_words/edit_form/'+non_lexical_word._id) Edit
              li(class='words-list-element')
                 a.btn.btn-danger.delete-non_lexical_word(href='#',data-id=non_lexical_word._id) Delete

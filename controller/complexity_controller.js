@@ -1,5 +1,5 @@
 const LexicalAnalysis = require('../lib/lexical_analysis');
-let NonLexicalWord = require('../models/non_lexical_word');
+var NonLexicalWord = require('../models/non_lexical_word');
 
 var ComplexityController = {
   GetComplexity: function(req, res) {
