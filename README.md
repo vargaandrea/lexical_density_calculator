@@ -7,12 +7,21 @@ Install the dependencies:
 ```sh
 $ npm install
 ```
-Edit config.js for MongoDB URI.
+Edit config.js for setting up MongoDB URI.
 
 Run Test:
 ```sh 
 $ npm test
 ```
+
+In case of Windows, edit package.json and change
+
+`"start": "export NODE_ENV=dev && node app",` (used on Linux)
+
+to
+
+`"start": "SET NODE_ENV=dev && node app",`
+
 
 Run app:
 
@@ -54,3 +63,6 @@ https://scotch.io/tutorials/test-a-node-restful-api-with-mocha-and-chai for test
 * MongoDB & Mongoose
 * Pug Templating
 * Chai
+
+## Other notes:
+Tested on Ubuntu 16.04.
