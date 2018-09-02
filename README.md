@@ -14,14 +14,13 @@ Run Test:
 $ npm test
 ```
 
-In case of Windows, edit package.json and change
+In case of Windows, edit package.json and change the line:
 
-`"start": "export NODE_ENV=dev && node app",` (used on Linux)
-
+```
+    "start": "export NODE_ENV=dev && node app",` (used on Linux)
 to
-
-`"start": "SET NODE_ENV=dev && node app",`
-
+    "start": "SET NODE_ENV=dev && node app",
+```
 
 Run app:
 
