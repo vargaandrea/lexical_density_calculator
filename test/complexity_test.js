@@ -72,7 +72,7 @@ describe('/GET complexity', () => {
     .end((err, res) => {
       res.should.have.status(200);
       res.body.should.be.jsonObj();
-      res.body.should.be.jsonObj().to.containSubset( { data: { overall_ld : "66.67"} } );
+      res.body.should.be.jsonObj().to.containSubset( { data: { overall_ld : "0.6667"} } );
       done();
     });
   });
@@ -89,7 +89,7 @@ describe('/GET complexity', () => {
     .send(send_data4)
     .end((err, res) => {
       res.should.have.status(200);
-      res.body.should.be.jsonObj().to.containSubset( { data: { overall_ld: '63.64', sentence_ld: ['66.67', '60.00']} } );
+      res.body.should.be.jsonObj().to.containSubset( { data: { overall_ld: '0.6364', sentence_ld: ['0.6667', '0.6000']} } );
       done();
     });
   });

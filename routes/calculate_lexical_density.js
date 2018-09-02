@@ -36,9 +36,9 @@ router.post('/', function(req, res){
         if (resultJSON.error && resultJSON.error.length > 0) {
           req.flash('error', resultJSON.error);
         } else {
-          req.flash('success', 'Overall lexical density: ', resultJSON.data.overall_ld);
+          req.flash('success', 'Overall lexical density: ', formatPercent(resultJSON.data.overall_ld));
           if (verbose) {
-            req.flash('success', 'Lexical density per sentences: ', resultJSON.data.sentence_ld);
+            req.flash('success', 'Lexical density per sentences: ', resultJSON.data.sentence_ld.map(formatPercent).join(', '));
           }
         }
         res.render('calculate_lexical_density', {
@@ -52,5 +52,9 @@ router.post('/', function(req, res){
     }
   })
 });
+
+function formatPercent(ld) {
+  return (ld * 100).toFixed(2) + '%';
+}
 
 module.exports = router;
