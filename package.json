@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node app",
+    "start": "export NODE_ENV=dev && node app",
     "test": "mocha --timeout 3000 --recursive"
   },
   "author": "Andrea Varga",
@@ -30,9 +30,5 @@
     "chai-json": "*",
     "chai-subset": "*",
     "mocha": "*"
-  },
-  "scripts": {
-   "start": "export NODE_ENV=dev && node app.js",
-   "test": "mocha --timeout 10000"
- }
+  }
 }
