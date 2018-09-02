@@ -65,7 +65,7 @@ var send_data3 = {
     'input_text' : "Kim loves going​ to the​ cinema."
 };
 describe('/GET complexity', () => {
-  it('It should return json with overall_ld: 66.67', (done) => {
+  it('It should return json with overall_ld: 0.6667', (done) => {
     chai.request(app)
     .get('/complexity')
     .send(send_data3)
